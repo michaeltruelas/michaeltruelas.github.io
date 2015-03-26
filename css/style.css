@@ -1,76 +1,232 @@
+body {
+	margin: 0;
+	background-color: #fbfbfb;
+}
+h1 {
+	font-family: 'Bubblegum Sans', arial,serif;
+	font-size: 40px;
+	text-align: center;
+	color: #FF9900;
+	text-shadow: 2px 2px 2px black;
+}
+p {
+	font-family: 'Merriweather', sans-serif;
+	line-height: 2;
+	padding-left: 15px;
+	color: black;
+	font-weight: bold;
+}
+
 .container {
 	width: 1000px;
 	margin: 0 auto;
 }
 
-header {
-	width: 1000px;
+/*============ HEADER ============*/
 
+header {
+	width: 1200px;
+	background-color: #393939;
+	height: 130px;
+	margin: 10px auto 0px auto;
+	border-bottom: 10px solid #787878;
+}
+
+.logo {
+	display: inline-block;
+	margin: 16px auto 0px;
+	width: 120px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	padding: 5px 0px 5px 5px;
+	z-index: 4;
+	border: 8px ridge #6e6e6e;
+	border-radius: 5%;
+}
+
+.logo a {
+	font-family: 'Bubblegum Sans', cursive;
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	color: #FF5A09;
+	text-decoration: none;
+	text-shadow: 2px 2px 2px black;
 }
 
 nav {
-	background-color: #3E7CA5;
-	padding: 10px;
-	text-align: center;
-	margin-bottom: 10px;
+	position: absolute;
+	top: 32px;
+	right: 0px;
+	bottom: 0px;
+	left: 20px;
 }
-
 nav ul {
-	text-decoration: none;
-	list-style-type: none;
 	text-align: center;
-	padding: 0;
+	line-height: 60px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	list-style: outside none none;
 }
-
 nav ul li {
-	display: inline;
-	margin: 0 15px;
+	display: inline-block;
+	position: relative;
 }
-
-a:link {
+nav ul li a {
+	display: block;
 	text-decoration: none;
-	color: #FFF;
+	font-family: 'Merriweather', sans-serif;
+	font-size: 26px;
+	font-weight: 600;
+	color: #FF5A09;
+	text-shadow: 2px 2px 2px black;
+	margin-right: 60px;
 }
 
-a:visited {
-	color: #000;
+nav ul li a:hover{
+	color: white;
+	text-shadow: 2px 2px 2px #FF5A09;
 }
 
-a:hover {
-	color: #999;
+header nav ul li.xor_nav {
+	margin-left: 200px;
 }
 
-a:active {
-	color: #CC3300;
+/*=========== MAIN ============*/
+
+.container2{
+  margin:20px auto;
+  width:750px;
+  height:300px;
+  overflow:hidden;
+  position:relative;
+  padding: 0px 200px;
+  left: 50px;
+
+}
+.photo{
+  position:absolute;
+  animation:round 17s infinite;
+  opacity:0;
+  
+}
+@keyframes round{   
+  25%{opacity:1;}
+  40%{opacity:0;}
+} 
+
+img:nth-child(1){animation-delay:0s;}
+img:nth-child(2){animation-delay:4s;}
+img:nth-child(3){animation-delay:8s;}
+img:nth-child(4){animation-delay:12s;}
+
+.container3 {
+	margin: 0 auto;
+	width: 800px;
 }
 
-.top {
-	border: 2px solid #000000;
-	width: 500px;
-	height: 500px;
+.main_image {
+
+	width: 700px;
+	height: 400px;
+	position: absolute;
+	top: 850px;
+	left: 325px;
+}
+
+/*========= SECTION ===========*/
+
+section.section1 {
+	width: 350px;
 	float: left;
-	padding: 10px;
-	margin-bottom: 10px;
+	display: inline-block;
+	border: 7px ridge #393939;
+	position: absolute;
+	left: 150px;
+	top: 200px;
+	background-color: #d2d2d2;
 }
 
-.bottom {
-	border: 2px solid #000000;
-	width: 500px;
-	height: 300px;
-	float: left;
-	padding: 10px;
-}
-
-aside {
-	width: 300px;
-	height: 700px;
-	background-color: #3E7CA5;
+aside.aside1 {
+	width: 350px;
 	float: right;
-	padding: 10px;
+	position: absolute;
+	right:375px;
+	top: 200px;
+	display: inline-block;
 }
 
-footer {
-	clear:both;
-	padding: 10px;
+section.section2 {
+	width: 450px;
+	float: right;
+	display: inline-block;
+	border: 7px ridge #393939;
+	position: absolute;
+	top: 600px;
+	right:150px;
+	background-color: #d2d2d2;
 }
+
+aside.aside2 {
+	width: 350px;
+	float: left;
+	position: absolute;
+	left:200px;
+	top: 600px;
+	display: inline-block;
+}
+
+
+/*========== FOOTER ===========*/
+footer {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #393939;
+	padding-top: 50px;
+	position: relative;
+	bottom: 10px;
+	top: 825px;
+	clear: both;
+	border-top: 10px solid #787878;
+}
+
+footer p {
+	text-align: center;
+	font-family: 'Merriweather', sans-serif;
+	color: lightgrey;
+
+}
+
+.items ul {
+	text-align: center;
+}
+
+.items ul li {
+	display: inline;
+}
+
+.items ul li a {
+	color: lightgrey;
+	text-decoration: none;
+	margin-right: 20px;
+	font-size: 15px;
+}
+
+.social {
+	text-align: center;
+}
+
+.social a {
+	text-decoration: none;
+	padding: 0px 10px;
+	color: #FF5A09;
+	font-size: 20px;
+}
+
+.social a:hover {
+	color: #349CED;
+}
+
 
